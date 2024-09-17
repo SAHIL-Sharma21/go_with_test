@@ -43,3 +43,17 @@ func assertCorrectMessage(t testing.TB, got, want string) {
 		t.Errorf("got %q want %q", got, want)
 	}
 }
+
+func TestGreetUser(t *testing.T) {
+	t.Run("in spanish", func(t *testing.T) {
+		got := GreetUser("Sahil", "Spanish")
+		want := "Hola, Sahil"
+		assertCorrectMessage(t, got, want)
+	})
+	t.Run("in french", func(t *testing.T) {
+		got := GreetUser("Avinash", "French")
+		want := "Bonjour, Avinash"
+
+		assertCorrectMessage(t, got, want)
+	})
+}
