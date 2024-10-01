@@ -20,3 +20,6 @@
 ```
  - It can return 2 values. The second value is a boolean which indicates if the key was found successfully.
  - Go has a built-in function delete that works on maps. It takes two arguments. The first is the map and the second is the key to be removed.
+
+### Dependency injection
+- The Buffer type from the bytes package implements the Writer interface, because it has the method Write(p []byte) (n int, err error).
