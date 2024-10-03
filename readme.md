@@ -23,3 +23,15 @@
 
 ### Dependency injection
 - The Buffer type from the bytes package implements the Writer interface, because it has the method Write(p []byte) (n int, err error).
+
+### Concurrency
+- concurrency is the process of multiple goroutines executing at the same time.
+- he purposes of the following, means "having more than one thing in progress." This is something that we do naturally everyday.
+
+Normally in Go when we call a function **doSomething()** we wait for it to return (even if it has no value to return, we still wait for it to finish). We say that this operation is blocking - it makes us wait for it to finish. An operation that does not block in Go will run in a separate process called a **goroutine**. 
+
+#### channels
+
+- A channel is a data structure that can send and receive values.
+
+We can solve this data race by coordinating our goroutines using channels. Channels are a Go data structure that can both receive and send values. These operations, along with their details, allow communication between different processes.
