@@ -35,3 +35,12 @@ Normally in Go when we call a function **doSomething()** we wait for it to retur
 - A channel is a data structure that can send and receive values.
 
 We can solve this data race by coordinating our goroutines using channels. Channels are a Go data structure that can both receive and send values. These operations, along with their details, allow communication between different processes.
+
+#### Waitgroups
+A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. Then each of the goroutines runs and calls Done when finished. At the same time, Wait can be used to block until all goroutines have finished.
+
+- We are using ```sync.WaitGroup``` which is a convenient way of synchronising concurrent processes.
+
+-  ```Mutex``` allows us to add locks to our data
+
+- ```WaitGroup``` is a means of waiting for goroutines to finish jobs
